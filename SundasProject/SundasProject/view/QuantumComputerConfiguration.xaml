@@ -1,0 +1,67 @@
+﻿<Page x:Class="SundasProject.view.QuantumComputerConfiguration"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:local="clr-namespace:SundasProject.view"
+      mc:Ignorable="d" 
+      DataContext="{Binding RelativeSource={RelativeSource Self}}"
+      Title="Quantum Optics Simulator" Height="510" Width="1260">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- List of saved properties -->
+        <DataGrid x:Name="PropertiesDataGrid" Grid.Column="0" AutoGenerateColumns="False" SelectionChanged="PropertiesDataGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Wavelength" Binding="{Binding Wavelength}" />
+                <DataGridTextColumn Header="Path" Binding="{Binding Path}" />
+                <DataGridTextColumn Header="Phase" Binding="{Binding Phase}" />
+                <DataGridTextColumn Header="Intensity" Binding="{Binding Intensity}" />
+                <DataGridTextColumn Header="Duration" Binding="{Binding Duration}" />
+                <DataGridTextColumn Header="Center" Binding="{Binding Center}" />
+                <DataGridTextColumn Header="Bandwidth" Binding="{Binding Bandwidth}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Layout for input fields and buttons -->
+        <StackPanel Grid.Column="1" Orientation="Vertical" Margin="10">
+
+            <!-- Input fields -->
+            <StackPanel Margin="0,0,0,5">
+                <Label Content="Wavelength" />
+                <TextBox x:Name="WavelengthTextBox" Margin="0,0,0,10" PreviewTextInput="NumberValidationTextBox" DataObject.Pasting="NumberValidationPasting"/>
+                <Label Content="Path" />
+                <TextBox x:Name="PathTextBox" Margin="0,0,0,10" PreviewTextInput="NumberValidationTextBox" DataObject.Pasting="NumberValidationPasting"/>
+                <Label Content="Phase" />
+                <TextBox x:Name="PhaseTextBox" Margin="0,0,0,10" PreviewTextInput="NumberValidationTextBox" DataObject.Pasting="NumberValidationPasting"/>
+                <Label Content="Intensity" />
+                <TextBox x:Name="IntensityTextBox" Margin="0,0,0,10" PreviewTextInput="NumberValidationTextBox" DataObject.Pasting="NumberValidationPasting"/>
+                <Label Content="Duration" />
+                <TextBox x:Name="DurationTextBox" Margin="0,0,0,10" PreviewTextInput="NumberValidationTextBox" DataObject.Pasting="NumberValidationPasting"/>
+                <Label Content="Center" />
+                <TextBox x:Name="CenterTextBox" Margin="0,0,0,10" PreviewTextInput="NumberValidationTextBox" DataObject.Pasting="NumberValidationPasting"/>
+                <Label Content="Bandwidth" />
+                <TextBox x:Name="BandwidthTextBox" Margin="0,0,0,10" PreviewTextInput="NumberValidationTextBox" DataObject.Pasting="NumberValidationPasting"/>
+            </StackPanel>
+
+            <!-- Buttons -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="CreateButton" Content="Create" Margin="5" Height="60" Width="100" BorderThickness="1" BorderBrush="Green" FontSize="16" Click="CreateButton_Click" />
+                <Button x:Name="UpdateButton" Content="Update" Margin="5" Height="60" Width="100" BorderThickness="1" BorderBrush="BlueViolet" FontSize="16" Click="UpdateButton_Click"/>
+                <Button x:Name="DeleteButton" Content="Delete" Margin="5" Height="60" Width="100" BorderThickness="1" BorderBrush="Red" FontSize="16" Click="DeleteButton_Click"/>
+                <Button x:Name="SimulateButton" Content="Run ▶" Margin="5" Height="60" Width="65" BorderThickness="1" BorderBrush="Blue" FontSize="12" Click="SimulateButton_Click"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Picture Box -->
+        <Image 
+            x:Name="PlotImage" 
+            Grid.Column="2" 
+            Stretch="Uniform" />
+    </Grid>
+</Page>
