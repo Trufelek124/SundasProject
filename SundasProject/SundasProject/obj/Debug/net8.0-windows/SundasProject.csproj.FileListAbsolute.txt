@@ -18,3 +18,4 @@ C:\Users\kwerner\Documents\doktorat\Sundas\SundasProject\SundasProject\obj\Debug
 C:\Users\kwerner\Documents\doktorat\Sundas\SundasProject\SundasProject\obj\Debug\net8.0-windows\SundasProject.pdb
 C:\Users\kwerner\Documents\doktorat\Sundas\SundasProject\SundasProject\obj\Debug\net8.0-windows\SundasProject.genruntimeconfig.cache
 C:\Users\kwerner\Documents\doktorat\Sundas\SundasProject\SundasProject\obj\Debug\net8.0-windows\ref\SundasProject.dll
+C:\Users\kwerner\Documents\doktorat\Sundas\SundasProject\SundasProject\obj\Debug\net8.0-windows\SundasProject.sourcelink.json

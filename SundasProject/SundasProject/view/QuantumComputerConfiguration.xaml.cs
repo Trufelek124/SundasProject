@@ -46,22 +46,22 @@ namespace SundasProject.view
             try
             {
                 if (PropertiesDataGrid.SelectedItem is Property property &&
-                    double.TryParse(WavelengthTextBox.Text, out var wavelength) &&
-                    double.TryParse(PathTextBox.Text, out var path) &&
-                    double.TryParse(PhaseTextBox.Text, out var phase) &&
-                    double.TryParse(IntensityTextBox.Text, out var intensity) &&
-                    double.TryParse(DurationTextBox.Text, out var duration) &&
-                    double.TryParse(CenterTextBox.Text, out var center) &&
-                    double.TryParse(BandwidthTextBox.Text, out var bandwidth))
+                    double.TryParse(WavelengthTextBox.Text, out var wl) &&
+                    double.TryParse(PathTextBox.Text, out var pth) &&
+                    double.TryParse(PhaseTextBox.Text, out var phs) &&
+                    double.TryParse(IntensityTextBox.Text, out var inte) &&
+                    double.TryParse(DurationTextBox.Text, out var dur) &&
+                    double.TryParse(CenterTextBox.Text, out var cntr) &&
+                    double.TryParse(BandwidthTextBox.Text, out var bw))
                 {
 
-                    quantumComputerConfigurationController.CreateNewProperty(wavelength,
-                        path,
-                        phase,
-                        intensity,
-                        duration,
-                        center,
-                        bandwidth
+                    quantumComputerConfigurationController.CreateNewProperty(wl,
+                        pth,
+                        phs,
+                        inte,
+                        dur,
+                        cntr,
+                        bw
                         );
 
 

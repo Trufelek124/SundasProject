@@ -157,7 +157,7 @@ namespace SundasProject.view {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SundasProject;component/view/quantumcomputerconfiguration.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SundasProject;V1.0.0.0;component/view/quantumcomputerconfiguration.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\view\QuantumComputerConfiguration.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
